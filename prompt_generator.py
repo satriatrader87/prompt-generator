@@ -34,10 +34,8 @@ if __name__ == "__main__":
         print("Previous prompt found. Do you want to reuse it? (y/n)")
         reuse = input().strip().lower()
         if reuse == 'y':
-            print("
-Reusing previous prompt...")
-            print("Generated Prompt:
-")
+            print("\nReusing previous prompt...")
+            print("Generated Prompt:\n")
             print(previous_prompt["generated_prompt"])
             exit()
 
@@ -50,14 +48,11 @@ Reusing previous prompt...")
 
     # Generate and display the new prompt
     generated_prompt = generate_prompt(name, core_description, outfit_description, situation, background)
-    print("
-Generated Prompt:
-")
+    print("\nGenerated Prompt:\n")
     print(generated_prompt)
 
     # Save the prompt to a text file and update the history
     save_prompt_to_file(generated_prompt)
     save_prompt_history({"generated_prompt": generated_prompt})
 
-    print("
-The prompt has been saved to 'generated_prompt.txt'.")
+    print("\nThe prompt has been saved to 'generated_prompt.txt'.")
