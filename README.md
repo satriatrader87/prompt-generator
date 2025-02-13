@@ -1,6 +1,6 @@
 # Prompt Generator
 
-![Python Application](https://github.com/USERNAME/prompt-generator/workflows/Python%20Application/badge.svg)
+![Python Application](https://github.com/satriatrader87/prompt-generator/workflows/Python%20Application/badge.svg)
 
 An advanced prompt generator for consistent text-to-image generation. This tool allows you to create prompts with history support and batch processing, ensuring design consistency across variations.
 
