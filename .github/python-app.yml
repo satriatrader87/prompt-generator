@@ -1,1 +1,33 @@
+name: Python App with Slack Notification
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: python -m pip install --upgrade pip
+
+    - name: Run script
+      run: python prompt_generator.py
+
+    - name: Send Slack notification on failure
+      if: failure()
+      run: |
+        curl -X POST -H 'Content-type: application/json' \
+        --data '{"text":"🚨 The Prompt Generator script failed on GitHub Actions!"}' \
+        https://hooks.slack.com/services/your/slack/webhook
 
