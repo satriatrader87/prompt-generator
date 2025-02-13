@@ -13,7 +13,7 @@ An advanced prompt generator for consistent text-to-image generation. This tool 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/USERNAME/prompt-generator.git
+   git clone https://github.com/satriatrader87/prompt-generator.git
    cd prompt-generator
    ```
 2. Run the script:
